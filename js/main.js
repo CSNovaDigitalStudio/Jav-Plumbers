@@ -27,3 +27,10 @@ cards.forEach(card => {
     card.style.transform = "translateY(50px)";
     card.style.transition = "0.6s";
 });
+
+const menuToggle = document.querySelector('.menu-toggle');
+const nav = document.querySelector('.navbar nav');
+
+menuToggle.addEventListener('click', () => {
+    nav.classList.toggle('active');
+});

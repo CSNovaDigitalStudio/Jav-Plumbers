@@ -311,4 +311,97 @@ footer {
     box-shadow: 0 0 20px rgba(0,170,255,0.5);
 }
 
+.navbar {
+    padding: 15px 50px;
+}
 
+.menu-toggle {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+
+    .navbar {
+        padding: 15px 20px;
+    }
+
+    .menu-toggle {
+        display: block;
+        color: var(--white);
+    }
+
+    .navbar nav {
+        position: absolute;
+        top: 70px;
+        right: 0;
+        background: var(--dark-navy);
+        width: 100%;
+        display: none;
+        flex-direction: column;
+        text-align: center;
+        padding: 20px 0;
+    }
+
+    .navbar nav a {
+        margin: 15px 0;
+        display: block;
+    }
+
+    .navbar nav.active {
+        display: flex;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .hero {
+        height: auto;
+        padding: 120px 20px 60px;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero h2 {
+        font-size: 1.6rem;
+    }
+
+    .hero-content p {
+        font-size: 14px;
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    .services,
+    .gallery,
+    .problems,
+    .values,
+    .about,
+    .contact {
+        padding: 40px 20px;
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    .about-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-content img {
+        width: 100%;
+    }
+
+}
+
+
+input, textarea {
+    font-size: 16px;
+}
