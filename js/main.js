@@ -34,3 +34,28 @@ const nav = document.querySelector('.navbar nav');
 menuToggle.addEventListener('click', () => {
     nav.classList.toggle('active');
 });
+
+
+// WhatsApp Form Submit
+const whatsappForm = document.getElementById("whatsappForm");
+
+whatsappForm.addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    const name = document.getElementById("name").value;
+    const phone = document.getElementById("phone").value;
+    const message = document.getElementById("message").value;
+
+    const whatsappNumber = "27789905606"; // no +, no spaces
+
+    const text = `New Plumbing Request:
+Name: ${name}
+Phone: ${phone}
+Problem: ${message}`;
+
+    const encodedText = encodeURIComponent(text);
+
+    const url = `https://wa.me/${whatsappNumber}?text=${encodedText}`;
+
+    window.open(url, "_blank");
+});
